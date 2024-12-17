@@ -17,8 +17,9 @@ public class Leetcode34 {
 
         Leetcode34 l=new  Leetcode34();
 
-        l.searchRange(nums,target);
-        l.search(nums,target,true);
+         int[] result = l.searchRange(nums, target);
+        System.out.println("Start Index: " + result[0]);
+        System.out.println("End Index: " + result[1]);
     }
 
     public int[] searchRange(int[] nums,int target) {
