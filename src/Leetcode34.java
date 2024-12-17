@@ -6,19 +6,26 @@ import java.util.Scanner;
 public class Leetcode34 {
 
     public static void main(String [] args){
-        Scanner sc=new Scanner(System.in);
-        int [] nums=new int[7];
+        Scanner sc = new Scanner(System.in);
+        int[] nums = new int[7];
+
+        // Input elements of the array
         System.out.println("Enter the elements of an array");
-        for(int i=0;i< nums.length;i++){
-            nums[i]=sc.nextInt();
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = sc.nextInt();
         }
+
+        // Input target element
         System.out.println("Enter target element:");
-        int target=sc.nextInt();
+        int target = sc.nextInt();
 
-        Leetcode34 l=new  Leetcode34();
+        // Create an object of the class
+        Leetcode34 l = new Leetcode34();
 
-        l.searchRange(nums,target);
-        l.search(nums,target,true);
+        // Call searchRange and store the result
+        int[] result = l.searchRange(nums, target);
+        System.out.println("Start Index: " + result[0]);
+        System.out.println("End Index: " + result[1]);
     }
 
     public int[] searchRange(int[] nums,int target) {
